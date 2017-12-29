@@ -237,7 +237,7 @@
 #X obj 247 951 hsl 127 30 0 1 0 0 empty empty Position -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 235 1019 tgl 30 0 empty empty Loop_on/off 35 7 0 10 -203904
--1 -1 1 1;
+-1 -1 0 1;
 #X text -38 -84 comment;
 #X text -149 -34 comment;
 #X obj 287 617 soundfiler;
@@ -245,7 +245,7 @@
 #X obj 743 607 / 20;
 #X text 302 636 todo: sum(R \, L) / 2 ipv alleen L;
 #X obj 38 821 s sampleSize;
-#N canvas 145 239 598 398 reload-start_lenght_end_length 1;
+#N canvas 145 239 598 398 reload-start_lenght_end_length 0;
 #X obj 28 279 -;
 #X obj 107 133 hsl 127 30 0 1 0 0 empty empty Start -2 -8 0 10 -233017
 -1 -1 0 1;
@@ -296,9 +296,8 @@ is not yet enabled;
 #X obj 387 888 s length;
 #X floatatom 172 268 5 0 0 0 - - -, f 5;
 #X floatatom 341 258 5 0 0 0 - - -, f 5;
-#N canvas 74 398 683 494 read_length-defRate_sampleSize_reload 0;
-#X text 93 87 soundfiler -> samplesize;
-#X obj 16 88 soundfiler;
+#N canvas 74 398 683 494 read_length-defRate_sampleSize_reload 1;
+#X text 104 85 soundfiler -> samplesize;
 #X msg 16 66 read -resize \$1 sampl1L sampl1R;
 #X obj 272 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -320,23 +319,24 @@ is not yet enabled;
 #X msg 151 301 set 1 1;
 #X obj 56 333 cyclone/bondo;
 #X obj 151 278 loadbang;
-#X connect 1 0 3 0;
-#X connect 1 0 10 0;
-#X connect 1 0 14 0;
-#X connect 2 0 1 0;
-#X connect 3 0 5 0;
-#X connect 4 0 2 0;
-#X connect 9 0 20 0;
-#X connect 10 0 16 0;
-#X connect 10 0 20 1;
-#X connect 12 0 15 0;
-#X connect 15 0 9 0;
-#X connect 15 0 17 0;
-#X connect 18 0 11 0;
-#X connect 19 0 20 0;
+#X obj 16 88 soundfiler_;
+#X connect 1 0 21 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 8 0 19 0;
+#X connect 9 0 15 0;
+#X connect 9 0 19 1;
+#X connect 11 0 14 0;
+#X connect 14 0 8 0;
+#X connect 14 0 16 0;
+#X connect 17 0 10 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 19 1 17 1;
 #X connect 20 0 18 0;
-#X connect 20 1 18 1;
-#X connect 21 0 19 0;
+#X connect 21 0 2 0;
+#X connect 21 0 9 0;
+#X connect 21 0 13 0;
 #X restore -80 799 pd read_length-defRate_sampleSize_reload;
 #X obj -80 821 s defaultRate;
 #X text 588 -51 default rate depends on \; sample size \, samle rate

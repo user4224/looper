@@ -48,8 +48,8 @@
 #X obj -23 356 inlet;
 #X text -106 309 inlets \; browser / hit / stop, f 23;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array arRL 1 float 2;
-#X coords 0 1 1 -1 200 50 1 0 0;
+#X array arRL 55164 float 2;
+#X coords 0 1 55164 -1 200 50 1 0 0;
 #X restore 6 26 graph;
 #X obj 216 565 symbol;
 #X msg 216 544 symbol samples/Comfast_kick.wav;
