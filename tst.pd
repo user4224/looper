@@ -1,0 +1,13 @@
+#N canvas 1083 370 450 300 10;
+#X msg 68 146 read \$1;
+#X msg 169 113 symbol samples/1.wav;
+#X obj 169 135 symbol;
+#X msg 243 45 print;
+#X obj 44 192 print;
+#X msg 38 37 open samples/10.wav;
+#X obj 27 91 writesf~ 2;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 6 0;
+#X connect 5 0 6 0;
