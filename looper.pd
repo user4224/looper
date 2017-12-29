@@ -2755,7 +2755,7 @@
 #X obj 267 932 fx/dly1~;
 #X obj 438 1007 fx/limiter;
 #X text 152 1118 comment;
-#X msg 442 635 symbol samples/1.wav;
+#X msg 503 716 symbol samples/1.wav;
 #X obj 664 128 utils/djm-101-knobs1;
 #X obj 608 38 utils/djm-101-faders;
 #X obj 649 978 utils/dac_;
@@ -2855,6 +2855,7 @@
 -1 -1;
 #X msg 938 493 1;
 #X floatatom 938 515 5 0 0 0 - - -, f 5;
+#X msg 498 782 symbol samples/10.wav;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 2 0 7 0;
@@ -2963,3 +2964,4 @@
 #X connect 104 0 103 0;
 #X connect 105 0 106 0;
 #X connect 107 0 108 0;
+#X connect 109 0 70 0;
