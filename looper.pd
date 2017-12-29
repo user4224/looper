@@ -2850,6 +2850,10 @@
 #X msg 721 650 symbol samples/\$1.wav;
 #X obj 878 614 change;
 #X obj 825 394 utils/sample_selector;
+#X obj 936 251 hradio 20 1 0 4 empty empty empty 0 -8 0 10 -262130
+-1 -1 0;
+#X obj 913 295 bng 25 250 50 0 empty empty empty 17 7 0 10 -204786
+-1 -1;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 2 0 7 0;
@@ -2960,3 +2964,4 @@
 #X connect 105 1 101 0;
 #X connect 105 1 103 0;
 #X connect 105 1 98 1;
+#X connect 106 0 107 0;

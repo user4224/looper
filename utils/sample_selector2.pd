@@ -1,20 +1,22 @@
-#N canvas 0 23 450 300 10;
+#N canvas 763 175 450 300 10;
 #X obj 101 52 inlet;
 #X text 50 16 sample name/nr;
 #X obj 68 73 loadbang;
-#X msg 68 95 1;
-#X obj 106 151 hradio 20 1 0 8 empty empty Sample_nr 0 -8 0 10 -262130
--1 -1 1;
-#X floatatom 166 134 5 0 0 0 - - -, f 5;
+#X floatatom 193 126 5 0 0 0 - - -, f 5;
 #X obj 106 251 outlet;
 #X obj 156 251 outlet;
 #X obj 156 202 change;
 #X text 266 164 chng;
-#X connect 0 0 4 0;
-#X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X connect 4 0 8 0;
-#X connect 4 0 6 0;
-#X connect 8 0 7 0;
+#X obj 107 122 hradio 20 1 0 4 empty empty empty 0 -8 0 10 -262130
+-1 -1 0;
+#X obj 104 146 bng 30 250 50 0 empty empty empty 17 7 0 10 -204786
+-1 -1;
+#X msg 68 95 set 0;
+#X connect 2 0 10 0;
+#X connect 3 0 6 0;
+#X connect 6 0 5 0;
+#X connect 8 0 9 0;
+#X connect 8 0 3 0;
+#X connect 9 0 4 0;
+#X connect 10 0 8 0;
 #X coords 0 -1 1 1 200 80 1 100 100;
