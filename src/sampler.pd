@@ -48,8 +48,8 @@
 #X obj -23 356 inlet;
 #X text -106 309 inlets \; browser / hit / stop, f 23;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array arRL 440935 float 2;
-#X coords 0 1 440935 -1 200 50 1 0 0;
+#X array arRL 44093 float 2;
+#X coords 0 1 44093 -1 200 50 1 0 0;
 #X restore 6 26 graph;
 #X obj 216 565 symbol;
 #X msg 216 544 symbol samples/Comfast_kick.wav;
@@ -238,7 +238,7 @@
 #X obj 569 383 s phasorPlay;
 #X obj 860 384 s phasorPhase;
 #X obj 247 951 hsl 127 30 0 1 0 0 empty empty Position -2 -8 0 10 -262144
--1 -1 5770 1;
+-1 -1 0 1;
 #X obj 235 1019 tgl 30 0 empty empty Loop_on/off 35 7 0 10 -203904
 -1 -1 0 1;
 #X text -38 -84 comment;
@@ -250,12 +250,12 @@
 #X obj 38 821 s sampleSize;
 #N canvas 490 297 726 398 reload-start_lenght_end_length 0;
 #X obj 106 183 hsl 127 30 0 1 0 0 empty empty End -2 -8 0 10 -233017
--1 -1 12600 1;
+-1 -1 0 1;
 #X obj 28 279 -;
 #X obj 107 133 hsl 127 30 0 1 0 0 empty empty Start -2 -8 0 10 -233017
 -1 -1 0 1;
 #X obj 245 133 hsl 127 30 0.01 1 1 0 empty empty Length -2 -8 0 10
--233017 -1 -1 12600 1;
+-233017 -1 -1 0 1;
 #X obj 242 191 +;
 #X obj 242 168 t b f;
 #X msg 272 258 color \$1;
@@ -328,10 +328,12 @@ is not yet enabled;
 #X msg 151 301 set 1 1;
 #X obj 56 333 cyclone/bondo;
 #X obj 151 278 loadbang;
+#X obj 361 112 print;
 #X obj 16 88 soundfiler_;
-#X connect 1 0 21 0;
+#X connect 1 0 22 0;
 #X connect 2 0 4 0;
 #X connect 3 0 1 0;
+#X connect 3 0 21 0;
 #X connect 8 0 19 0;
 #X connect 9 0 15 0;
 #X connect 9 0 19 1;
@@ -343,9 +345,9 @@ is not yet enabled;
 #X connect 19 0 17 0;
 #X connect 19 1 17 1;
 #X connect 20 0 18 0;
-#X connect 21 0 2 0;
-#X connect 21 0 9 0;
-#X connect 21 0 13 0;
+#X connect 22 0 2 0;
+#X connect 22 0 9 0;
+#X connect 22 0 13 0;
 #X restore -80 799 pd read_length-defRate_sampleSize_reload;
 #X obj -80 821 s defaultRate;
 #X text 588 -51 default rate depends on \; sample size \, samle rate
@@ -491,7 +493,7 @@ has to be touched first;
 #X msg 743 651 \; arRL xticks 0 \$1 5 \; arRL yticks 0 0.2 2 \; arRL
 xlabel 0 \$2 \;;
 #X obj 9 80 hsl 195 20 0 1 0 0 empty empty empty -2 -8 0 10 -99865
--228856 -1 8884 1;
+-228856 -1 0 1;
 #X obj 222 64 r positionGraph;
 #X obj 331 981 s positionGraph;
 #X text 243 733 Nudge time;
