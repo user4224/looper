@@ -1,0 +1,16 @@
+#N canvas 929 278 450 300 10;
+#X obj 142 137 env~;
+#X obj 60 154 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 142 159 - 100;
+#X obj 293 135 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 99 37 adc~;
+#X obj 19 56 env~;
+#X obj 19 78 - 100;
+#X obj 138 115 saturator~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 1;
+#X connect 7 0 0 0;
