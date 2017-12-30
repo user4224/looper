@@ -1,1 +1,1 @@
-open -a Pd-0.48-0.app looper.pd -nogui
+pd looper.pd -nogui
