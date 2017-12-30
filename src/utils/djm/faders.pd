@@ -1,6 +1,6 @@
-#N canvas 260 396 463 370 10;
+#N canvas 175 436 463 370 10;
 #X floatatom 76 114 0 0 0 0 - - -;
-#X floatatom 38 114 0 0 0 0 - - -;
+#X floatatom 13 113 0 0 0 0 - - -;
 #X text 23 140 value | nr | channel;
 #X obj 45 263 outlet;
 #X obj 95 263 outlet;

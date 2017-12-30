@@ -1,19 +1,22 @@
 #N canvas 878 271 496 327 10;
 #X obj 106 122 hsl 80 20 -48 48 0 0 empty empty Transpose -2 -8 0 10
--262130 -1 -1 2750 1;
-#X obj 72 153 i;
+-262130 -1 -1 3950 1;
+#X obj 88 167 i;
 #X floatatom 175 104 5 0 0 0 - - -, f 5;
 #X obj 168 235 print;
 #X msg 168 213 Transpose: \$1 note;
 #X obj 193 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
 -1 -1;
 #X msg 189 172 0;
-#X obj 99 66 inlet;
-#X obj 139 66 inlet;
+#X obj 67 51 inlet;
+#X obj 191 70 inlet;
 #X obj 105 267 outlet;
 #X obj 251 83 loadbang;
 #X text 329 72 Transpose \; +1 oct = +12 = 2*f \; (2 * x / 12) * f
 \; \; +24 -> f * 4 \; +12 -> f x 2 \; +0 -> f x 1;
+#X obj 117 38 to_negative_range;
+#X obj 120 60 * 24;
+#X text 120 20 for midi [0 \, 1] in;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 4 0;
@@ -25,4 +28,6 @@
 #X connect 7 0 0 0;
 #X connect 8 0 5 0;
 #X connect 10 0 5 0;
+#X connect 12 0 13 0;
+#X connect 13 0 0 0;
 #X coords 0 -1 1 1 112 45 2 100 100;
