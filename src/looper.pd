@@ -19,7 +19,7 @@
 -1;
 #X obj 166 504 fx/dly1~;
 #X text 161 1105 comment;
-#X obj 61 674 utils/dac_;
+#X obj 66 813 utils/dac_;
 #X obj 591 284 s~ outR;
 #X obj 535 284 s~ outL;
 #X obj 558 648 r~ outL;
@@ -250,7 +250,7 @@ file \; start rec;
 #X obj 99 294 utils/drumpads;
 #X obj 535 152 utils/adc_;
 #X obj 558 671 utils/sum~;
-#N canvas 518 158 719 507 djm 1;
+#N canvas 518 158 719 507 djm 0;
 #X obj 222 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 956 1;
 #X obj 242 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -264,7 +264,7 @@ file \; start rec;
 #X obj 383 294 loadbang;
 #X msg 224 185 0;
 #X obj 152 214 hsl 20 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1900 1;
+-1 -1 0 1;
 #X obj 101 183 utils/djm/faders;
 #X obj 212 345 utils/djm/knobsA;
 #X obj 530 377 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -372,7 +372,7 @@ file \; start rec;
 #N canvas 0 23 450 300 switch 0;
 #X obj 76 30 inlet;
 #X obj 78 73 == 35;
-#X obj 78 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 78 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 83 155 outlet;
 #X obj 78 95 == 0;
@@ -482,7 +482,7 @@ file \; start rec;
 #X obj 707 499 r lo;
 #X obj 747 499 r mid;
 #X obj 797 499 r hi;
-#X obj 63 791 fx/limiter~;
+#X obj 765 718 fx/limiter~;
 #X text 1090 853 comment;
 #X obj 676 631 s~ fxL;
 #X obj 726 631 s~ fxR;
@@ -507,7 +507,7 @@ file \; start rec;
 #X text 626 187 this is caused by too few samples for sampler;
 #X text 613 219 sampler stops only when 99% of sample has been reached
 ;
-#X obj 59 649 utils/sum~;
+#X obj 64 788 utils/sum~;
 #X text 697 71 todo: overdub;
 #X obj 616 319 r toggle-hit-stop;
 #X obj 558 348 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -515,13 +515,8 @@ file \; start rec;
 #X msg 558 326 set 1;
 #X msg 581 345 set 0;
 #X obj 558 368 moses 1;
-#X obj 165 694 fx/dly2~ dly01;
-#X obj 328 756 env~;
-#X obj 328 778 - 100;
-#X obj 328 800 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
-#X msg 445 697 15;
-#X msg 487 740 1000;
-#X obj 328 734 fx/filter_stereo~;
+#X obj 166 694 fx/dly2~ dly01;
+#X obj 159 737 fx/vibrato~;
 #X connect 0 0 1 0;
 #X connect 5 0 29 0;
 #X connect 7 0 5 0;
@@ -590,10 +585,6 @@ file \; start rec;
 #X connect 74 0 13 0;
 #X connect 74 1 10 0;
 #X connect 75 0 68 0;
-#X connect 75 0 81 0;
-#X connect 75 1 68 1;
-#X connect 76 0 77 0;
-#X connect 77 0 78 0;
-#X connect 79 0 81 2;
-#X connect 80 0 81 3;
-#X connect 81 0 76 0;
+#X connect 75 0 68 1;
+#X connect 76 0 68 0;
+#X connect 76 0 68 1;
