@@ -1,8 +1,8 @@
-#N canvas 833 224 585 493 10;
+#N canvas 810 238 585 493 10;
 #X obj 218 109 vsl 15 50 0 1 0 0 empty empty Dry 0 -9 0 10 -204786
 -1 -1 4900 1;
 #X obj 247 108 vsl 15 50 0 1 0 0 empty empty Wet 0 -9 0 10 -204786
--1 -1 2645 1;
+-1 -1 0 1;
 #X obj 135 229 *~ 1;
 #X obj 54 289 outlet~;
 #X obj 83 160 +~;
