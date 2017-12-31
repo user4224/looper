@@ -252,9 +252,9 @@ file \; start rec;
 #X obj 558 671 utils/sum~;
 #N canvas 518 158 719 507 djm 0;
 #X obj 222 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 957 1;
+-1 -1 956 1;
 #X obj 242 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1900 1;
+-1 -1 956 1;
 #X obj 262 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 956 1;
 #X obj 106 208 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -264,7 +264,7 @@ file \; start rec;
 #X obj 383 294 loadbang;
 #X msg 224 185 0;
 #X obj 152 214 hsl 20 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 1900 1;
 #X obj 101 183 utils/djm/faders;
 #X obj 212 345 utils/djm/knobsA;
 #X obj 530 377 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -276,7 +276,7 @@ file \; start rec;
 #X msg 489 319 64;
 #X obj 520 346 utils/djm/knobsB;
 #X obj 357 378 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1212 1;
+-1 -1 950 1;
 #X obj 377 378 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 950 1;
 #X obj 397 378 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -373,7 +373,7 @@ file \; start rec;
 #N canvas 0 23 450 300 switch 0;
 #X obj 76 30 inlet;
 #X obj 78 73 == 35;
-#X obj 78 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 78 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 83 155 outlet;
 #X obj 78 95 == 0;
@@ -508,11 +508,12 @@ file \; start rec;
 #X obj 59 649 utils/sum~;
 #X text 697 71 todo: overdub;
 #X obj 616 319 r toggle-hit-stop;
-#X obj 558 348 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 558 348 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 558 326 set 1;
 #X msg 581 345 set 0;
 #X obj 558 368 moses 1;
+#X obj 165 694 fx/dly2~ dly01;
 #X connect 0 0 1 0;
 #X connect 5 0 29 0;
 #X connect 7 0 5 0;
@@ -527,8 +528,6 @@ file \; start rec;
 #X connect 12 0 64 0;
 #X connect 13 0 22 2;
 #X connect 13 0 73 0;
-#X connect 14 0 68 0;
-#X connect 14 0 68 1;
 #X connect 19 0 35 0;
 #X connect 20 0 35 1;
 #X connect 21 0 22 1;
@@ -563,9 +562,9 @@ file \; start rec;
 #X connect 45 0 43 3;
 #X connect 46 0 43 4;
 #X connect 51 0 14 0;
-#X connect 51 0 68 1;
+#X connect 51 0 75 1;
 #X connect 52 0 14 0;
-#X connect 52 0 68 0;
+#X connect 52 0 75 0;
 #X connect 53 0 54 0;
 #X connect 56 0 54 0;
 #X connect 57 0 12 0;
@@ -582,3 +581,5 @@ file \; start rec;
 #X connect 72 0 71 0;
 #X connect 74 0 13 0;
 #X connect 74 1 10 0;
+#X connect 75 0 68 0;
+#X connect 75 1 68 1;
