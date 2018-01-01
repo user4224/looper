@@ -1,0 +1,3 @@
+p=$(pwd)
+echo "starting... "$p"/src/looper.pd"
+/Applications/Pd-0.48-0.app/Contents/MacOS/Pd ~/src/looper/src/looper.pd
