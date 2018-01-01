@@ -41,15 +41,15 @@
 #X obj -99 1167 *~;
 #X obj -41 1167 *~;
 #X obj -52 1072 vsl 30 79 0.01 1 1 0 empty empty empty 0 -9 0 10 -66577
--1 -1 6935 1;
+-1 -1 7622 1;
 #X text -88 415 outlets \; ~L / ~R;
 #X obj -63 356 inlet;
 #X obj -80 610 openpanel;
 #X obj -23 356 inlet;
 #X text -106 309 inlets \; browser / hit / stop, f 23;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array arRL 79803 float 2;
-#X coords 0 1 79803 -1 200 50 1 0 0;
+#X array arRL 107514 float 2;
+#X coords 0 1 107514 -1 200 50 1 0 0;
 #X restore 6 26 graph;
 #X obj 216 565 symbol;
 #X msg 216 544 symbol samples/Comfast_kick.wav;
@@ -167,7 +167,7 @@
 #X obj 571 284 s phasorPlay;
 #X obj 754 282 s phasorPhase;
 #X obj 754 234 r phasorStart;
-#N canvas 163 364 450 300 reload_anti_volume 1;
+#N canvas 163 364 450 300 reload_anti_volume 0;
 #X obj 141 72 loadbang;
 #X msg 77 146 0;
 #X obj 171 215 f;
@@ -177,7 +177,7 @@
 #X obj 68 58 inlet;
 #X obj 184 245 outlet;
 #X obj 171 142 delay 1;
-#X msg 171 171 0.9 30;
+#X msg 171 171 0.8 30;
 #X connect 0 0 1 0;
 #X connect 0 0 4 0;
 #X connect 0 0 8 0;
@@ -238,7 +238,7 @@
 #X obj 569 383 s phasorPlay;
 #X obj 860 384 s phasorPhase;
 #X obj 247 951 hsl 127 30 0 1 0 0 empty empty Position -2 -8 0 10 -262144
--1 -1 1298 1;
+-1 -1 846 1;
 #X obj 235 1019 tgl 30 0 empty empty Loop_on/off 35 7 0 10 -203904
 -1 -1 1 1;
 #X text -38 -84 comment;
@@ -520,7 +520,7 @@ has to be touched first;
 #X msg 743 651 \; arRL xticks 0 \$1 5 \; arRL yticks 0 0.2 2 \; arRL
 xlabel 0 \$2 \;;
 #X obj 9 80 hsl 195 20 0 1 0 0 empty empty empty -2 -8 0 10 -99865
--228856 -1 1998 1;
+-228856 -1 1302 1;
 #X obj 222 64 r positionGraph;
 #X obj 331 981 s positionGraph;
 #X text 243 733 Nudge time;
