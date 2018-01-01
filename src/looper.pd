@@ -18,11 +18,11 @@
 #X obj 515 411 bng 30 250 50 0 empty empty Stop 35 7 0 10 -261682 -1
 -1;
 #X text 161 1105 comment;
-#X obj 66 813 utils/dac_;
+#X obj 64 558 utils/dac_;
 #X obj 591 284 s~ outR;
 #X obj 535 284 s~ outL;
-#X obj 558 648 r~ outL;
-#X obj 618 648 r~ outR;
+#X obj 211 646 r~ outL;
+#X obj 278 646 r~ outR;
 #X msg 441 444 0;
 #X obj 341 471 sampler;
 #X floatatom 159 29 0 0 0 0 - - -;
@@ -248,14 +248,14 @@ file \; start rec;
 #X obj 70 290 i;
 #X obj 99 294 utils/drumpads;
 #X obj 535 152 utils/adc_;
-#X obj 558 671 utils/sum~;
+#X obj 211 671 utils/sum~;
 #N canvas 518 158 719 507 djm 0;
 #X obj 222 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 956 1;
 #X obj 242 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 956 1;
 #X obj 262 376 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 956 1;
+-1 -1 957 1;
 #X obj 106 208 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 126 208 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -267,25 +267,25 @@ file \; start rec;
 #X obj 101 183 utils/djm/faders;
 #X obj 212 345 utils/djm/knobsA;
 #X obj 530 377 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 344 1;
+-1 -1 950 1;
 #X obj 550 377 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1631 1;
+-1 -1 950 1;
 #X obj 570 377 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 957 1;
 #X obj 520 346 utils/djm/knobsB;
 #X obj 357 378 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 950 1;
+-1 -1 1900 1;
 #X obj 377 378 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 987 1;
+-1 -1 1900 1;
 #X obj 397 378 vsl 15 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 823 1;
+-1 -1 1900 1;
 #X obj 347 347 utils/djm/knobsMiddle;
 #X obj 400 189 utils/djm/knobsTop;
 #X msg 362 198 0;
 #X obj 422 216 hsl 30 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 46 1;
+-1 -1 457 1;
 #X obj 461 218 hsl 30 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2877 1;
+-1 -1 2786 1;
 #X obj 355 29 inlet;
 #X obj 372 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -478,17 +478,17 @@ file \; start rec;
 ;
 #X obj 448 13 loadbang;
 #X floatatom 433 65 5 0 0 0 - - -, f 5;
-#X obj 600 436 r hpf;
-#X obj 644 434 r lpf;
-#X obj 556 468 fx/filter~;
-#X obj 654 528 fx/filter3~;
-#X obj 707 499 r lo;
-#X obj 747 499 r mid;
-#X obj 797 499 r hi;
-#X obj 765 718 fx/limiter~;
+#X obj 679 440 r hpf;
+#X obj 723 438 r lpf;
+#X obj 635 472 fx/filter~;
+#X obj 733 532 fx/filter3~;
+#X obj 786 503 r lo;
+#X obj 826 503 r mid;
+#X obj 876 503 r hi;
+#X obj 753 667 fx/limiter~;
 #X text 1090 853 comment;
-#X obj 676 631 s~ fxL;
-#X obj 726 631 s~ fxR;
+#X obj 755 635 s~ fxL;
+#X obj 805 635 s~ fxR;
 #X obj 111 487 r~ fxR;
 #X obj 61 487 r~ fxL;
 #X msg 579 31 0;
@@ -510,21 +510,23 @@ file \; start rec;
 #X text 626 187 this is caused by too few samples for sampler;
 #X text 613 219 sampler stops only when 99% of sample has been reached
 ;
-#X obj 64 788 utils/sum~;
+#X obj 62 533 utils/sum~;
 #X text 697 71 todo: overdub;
 #X obj 616 319 r toggle-hit-stop;
-#X obj 558 348 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 558 348 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 558 326 set 1;
 #X msg 581 345 set 0;
 #X obj 558 368 moses 1;
-#X obj 166 694 fx/dly2~ dly01;
-#X obj 247 808 fx/vibrato~;
+#X obj 211 694 fx/dly2~ dly01;
+#X obj 154 517 fx/vibrato~;
 #X obj 370 337 delay 10 1 msec;
-#X obj 353 713 r rvb-all;
+#X obj 340 697 r rvb-all;
 #X obj 16 328 loadbang;
 #X msg 16 350 0;
-#X obj 290 738 fx/rvb~ r1;
+#X obj 273 718 fx/rvb~ r1;
+#X obj 557 735 utils/sum~;
+#X obj 557 455 utils/sum~;
 #X connect 0 0 1 0;
 #X connect 5 0 28 0;
 #X connect 7 0 5 0;
@@ -558,8 +560,8 @@ file \; start rec;
 #X connect 33 0 2 0;
 #X connect 33 1 16 0;
 #X connect 33 1 2 1;
-#X connect 34 0 41 0;
-#X connect 34 1 41 1;
+#X connect 34 0 74 0;
+#X connect 34 1 74 1;
 #X connect 35 0 38 0;
 #X connect 36 0 35 0;
 #X connect 37 0 36 0;
@@ -572,8 +574,8 @@ file \; start rec;
 #X connect 43 0 42 2;
 #X connect 44 0 42 3;
 #X connect 45 0 42 4;
-#X connect 50 0 74 1;
-#X connect 51 0 74 0;
+#X connect 50 0 67 1;
+#X connect 51 0 67 0;
 #X connect 52 0 53 0;
 #X connect 55 0 53 0;
 #X connect 56 0 12 0;
@@ -597,5 +599,9 @@ file \; start rec;
 #X connect 77 0 80 2;
 #X connect 78 0 79 0;
 #X connect 79 0 56 0;
-#X connect 80 0 67 0;
-#X connect 80 1 67 1;
+#X connect 80 0 81 0;
+#X connect 80 1 81 1;
+#X connect 81 0 82 0;
+#X connect 81 1 82 1;
+#X connect 82 0 41 0;
+#X connect 82 1 41 1;
