@@ -1,6 +1,6 @@
 #N canvas 1007 373 450 300 10;
 #X obj 105 124 hsl 60 15 -100 100 0 0 empty empty Detune -2 -8 0 10
--262130 -1 -1 2963 1;
+-262130 -1 -1 0 1;
 #X obj 58 160 i;
 #X floatatom 154 105 5 0 0 0 - - -, f 5;
 #X obj 238 238 print;
