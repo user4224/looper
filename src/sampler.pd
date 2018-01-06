@@ -37,8 +37,8 @@
 #X obj 3 346 inlet;
 #X text -106 309 inlets \; browser / hit / stop, f 23;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array arRL-\$0 132728 float 2;
-#X coords 0 1 132728 -1 200 50 1 0 0;
+#X array arRL-\$0 97467 float 2;
+#X coords 0 1 97467 -1 200 50 1 0 0;
 #X restore 6 119 graph;
 #X obj -101 522 symbol;
 #X msg -101 501 symbol samples/Comfast_kick.wav;
@@ -202,7 +202,7 @@
 #X obj 794 286 bng 30 250 50 0 empty empty Stop 35 7 0 10 -261682 -1
 -1;
 #X obj 247 951 hsl 127 30 0 1 0 0 empty empty Position -2 -8 0 10 -262144
--1 -1 5273 1;
+-1 -1 0 1;
 #X text -109 -133 comment;
 #X text -149 -34 comment;
 #X obj 309 589 soundfiler;
@@ -217,7 +217,7 @@
 -1 -1;
 #N canvas 193 233 840 697 pha1_pha2_start_length_sampleSize_loop- 1
 ;
-#X obj 25 -212 phasor~;
+#X obj 63 -226 phasor~;
 #X obj 99 42 *~;
 #X obj 7 -297 inlet;
 #X obj 118 -283 inlet;
@@ -245,45 +245,38 @@ loop;
 #X text 27 -348 phasor1in (rate \, play \, stop) / phasor2in (phase)
 / start / length / loop / sampleSize, f 83;
 #X obj 511 -284 inlet;
-#X text 625 -277 sampleSize;
 #X msg 234 -24 \$1 100;
 #X obj 511 -256 f;
 #X obj 319 -259 f;
 #X obj 233 -250 f;
 #X obj 118 -261 f;
 #X obj 40 94 outlet~;
-#X obj 623 -166 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
-#X floatatom 623 -30 5 0 0 0 - - -, f 5;
-#X obj 620 -198 samphold~;
-#X obj 92 -212 phasor~;
-#X obj 92 -180 *~;
+#X floatatom 319 -237 5 0 0 0 - - -, f 5;
+#X floatatom 7 -275 5 0 0 0 - - -, f 5;
 #X connect 0 0 12 0;
 #X connect 1 0 5 0;
-#X connect 1 0 31 0;
+#X connect 1 0 30 0;
+#X connect 2 0 32 0;
 #X connect 2 0 0 0;
-#X connect 2 0 35 0;
-#X connect 3 0 30 0;
+#X connect 3 0 29 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 6 0 8 0;
 #X connect 7 0 4 0;
-#X connect 10 0 29 0;
+#X connect 10 0 28 0;
 #X connect 12 0 13 0;
 #X connect 13 0 1 0;
-#X connect 14 0 26 0;
+#X connect 14 0 25 0;
 #X connect 15 0 13 1;
-#X connect 21 0 28 0;
-#X connect 24 0 27 0;
-#X connect 26 0 15 0;
-#X connect 27 0 1 1;
-#X connect 27 0 6 1;
-#X connect 28 0 12 1;
-#X connect 29 0 14 0;
-#X connect 30 0 0 1;
-#X connect 30 0 35 1;
-#X connect 32 0 33 0;
-#X connect 35 0 36 0;
+#X connect 21 0 27 0;
+#X connect 24 0 26 0;
+#X connect 25 0 15 0;
+#X connect 26 0 1 1;
+#X connect 26 0 6 1;
+#X connect 27 0 31 0;
+#X connect 27 0 12 1;
+#X connect 28 0 14 0;
+#X connect 29 0 0 1;
 #X restore -99 983 pd pha1_pha2_start_length_sampleSize_loop- L_R_snapshot_sampleRate
 ;
 #X obj 182 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -347,7 +340,7 @@ has to be touched first;
 #X obj 4 200 utils/transpose_knob;
 #X obj 116 200 utils/detune_knob;
 #X obj 9 173 hsl 195 20 0 1 0 0 empty empty empty -2 -8 0 10 -99865
--228856 -1 8119 1;
+-228856 -1 0 1;
 #X text 750 773 Nudge time;
 #X floatatom 587 -32 5 0 0 0 - - -, f 5;
 #X floatatom 587 12 5 0 0 0 - - -, f 5;
@@ -587,8 +580,8 @@ is not yet enabled;
 #X obj 85 62 bng 30 250 50 0 empty empty Stop 35 7 0 10 -261234 -1
 -1;
 #X obj 499 1141 tgl 30 0 empty empty Loop_on/off 35 7 0 10 -203904
--1 -1 1 1;
-#X obj 150 24 tgl 30 0 empty empty Loop 35 7 0 10 -203904 -1 -1 1 1
+-1 -1 0 1;
+#X obj 150 24 tgl 30 0 empty empty Loop 35 7 0 10 -203904 -1 -1 0 1
 ;
 #X obj 149 60 tgl 30 0 empty empty Rev 35 7 0 10 -204800 -1 -1 0 1
 ;
@@ -831,7 +824,7 @@ is not yet enabled;
 #X connect 186 0 201 0;
 #X connect 188 0 175 0;
 #X connect 190 0 191 0;
-#X connect 191 0 192 1;
+#X connect 191 0 192 0;
 #X connect 192 0 188 0;
 #X connect 193 0 192 0;
 #X connect 195 0 189 0;
