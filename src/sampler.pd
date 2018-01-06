@@ -202,7 +202,7 @@
 #X obj 794 286 bng 30 250 50 0 empty empty Stop 35 7 0 10 -261682 -1
 -1;
 #X obj 247 951 hsl 127 30 0 1 0 0 empty empty Position -2 -8 0 10 -262144
--1 -1 12600 1;
+-1 -1 0 1;
 #X text -109 -133 comment;
 #X text -149 -34 comment;
 #X obj 309 589 soundfiler;
@@ -215,7 +215,7 @@
 \; \; current rate depends on \; play on/off \, stop;
 #X obj 478 1192 bng 15 250 50 0 empty empty empty 17 7 0 10 -261234
 -1 -1;
-#N canvas 96 232 840 697 pha1_pha2_start_length_sampleSize_loop- 1
+#N canvas 96 232 652 697 pha1_pha2_start_length_sampleSize_loop- 1
 ;
 #X obj 78 173 phasor~;
 #X obj 107 436 *~;
@@ -252,8 +252,7 @@ pitch);
 #X obj 106 491 outlet~;
 #X floatatom 334 162 5 0 0 0 - - -, f 5;
 #X floatatom 22 124 5 0 0 0 - - -, f 5;
-#X obj 78 195 *~;
-#X obj 109 237 +~;
+#X obj 79 200 *~;
 #X connect 0 0 32 0;
 #X connect 1 0 5 0;
 #X connect 1 0 29 0;
@@ -275,11 +274,9 @@ pitch);
 #X connect 25 0 1 1;
 #X connect 26 0 30 0;
 #X connect 26 0 32 1;
-#X connect 26 0 33 1;
 #X connect 27 0 13 0;
 #X connect 28 0 0 1;
-#X connect 32 0 33 0;
-#X connect 33 0 12 0;
+#X connect 32 0 12 0;
 #X restore -99 983 pd pha1_pha2_start_length_sampleSize_loop- L_R_snapshot_sampleRate
 ;
 #X obj 182 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -343,7 +340,7 @@ has to be touched first;
 #X obj 4 200 utils/transpose_knob;
 #X obj 116 200 utils/detune_knob;
 #X obj 9 173 hsl 195 20 0 1 0 0 empty empty empty -2 -8 0 10 -99865
--228856 -1 19400 1;
+-228856 -1 0 1;
 #X text 750 773 Nudge time;
 #X floatatom 587 -32 5 0 0 0 - - -, f 5;
 #X floatatom 587 12 5 0 0 0 - - -, f 5;
@@ -583,8 +580,8 @@ is not yet enabled;
 #X obj 85 62 bng 30 250 50 0 empty empty Stop 35 7 0 10 -261234 -1
 -1;
 #X obj 499 1141 tgl 30 0 empty empty Loop_on/off 35 7 0 10 -203904
--1 -1 1 1;
-#X obj 150 24 tgl 30 0 empty empty Loop 35 7 0 10 -203904 -1 -1 1 1
+-1 -1 0 1;
+#X obj 150 24 tgl 30 0 empty empty Loop 35 7 0 10 -203904 -1 -1 0 1
 ;
 #X obj 149 60 tgl 30 0 empty empty Rev 35 7 0 10 -204800 -1 -1 0 1
 ;
