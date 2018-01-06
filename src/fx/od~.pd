@@ -1,4 +1,4 @@
-#N canvas 218 277 547 552 10;
+#N canvas 88 260 547 552 10;
 #X obj 36 71 inlet~;
 #X obj 86 71 inlet~;
 #X obj 28 363 outlet~;
@@ -9,16 +9,16 @@
 #X obj 199 94 loadbang;
 #X floatatom 263 261 5 0 0 0 - - -, f 5;
 #X obj 303 203 vsl 20 50 0 1 0 0 empty empty empty 0 -9 0 10 -261682
--1 -1 4900 1;
+-1 -1 521 1;
 #X floatatom 303 261 5 0 0 0 - - -, f 5;
 #X obj 343 203 vsl 20 50 0 1 0 0 empty empty empty 0 -9 0 10 -261682
--1 -1 0 1;
+-1 -1 58 1;
 #X floatatom 343 261 5 0 0 0 - - -, f 5;
 #X obj 50 201 fx_utils/gain_and_clip~ 10;
 #X obj 241 52 inlet;
 #X obj 60 231 fx_utils/gain_and_clip~ 40;
 #X obj 385 93 hsl 40 15 0 1 0 0 empty empty Mix -2 -8 0 10 -261682
--1 -1 0 1;
+-1 -1 390 1;
 #X obj 330 95 !- 1;
 #X obj 393 152 t b;
 #X obj 303 168 *;

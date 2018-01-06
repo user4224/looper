@@ -6,11 +6,11 @@
 #X obj -81 387 outlet~;
 #X obj 603 12 loadbang;
 #X obj 106 130 hsl 25 15 0 1 0 0 empty empty Low -2 -8 0 10 -261682
--1 -1 1200 1;
+-1 -1 1191 1;
 #X obj 146 130 hsl 25 15 0 1 0 0 empty empty Mid -2 -8 0 10 -261682
--1 -1 1200 1;
+-1 -1 2400 1;
 #X obj 186 130 hsl 25 15 0 1 0 0 empty empty High -2 -8 0 10 -261682
--1 -1 1200 1;
+-1 -1 1209 1;
 #X obj 257 9 inlet;
 #X obj 387 9 inlet;
 #X msg 603 34 0.5;
@@ -86,7 +86,7 @@
 #X obj 127 73 ../utils/line_;
 #X text -409 513 comment;
 #X obj 232 130 hsl 25 15 0 1 0 0 empty empty Top -2 -8 0 10 -261682
--1 -1 1200 1;
+-1 -1 1209 1;
 #X obj 232 149 hsl 25 8 0 1 0 0 empty empty empty -2 -8 0 10 -261682
 -1 -1 1200 1;
 #X obj 258 115 bng 10 250 50 0 empty empty empty 17 7 0 10 -33289 -258113
