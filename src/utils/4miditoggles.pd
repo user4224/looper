@@ -1,0 +1,56 @@
+#N canvas 220 443 450 300 10;
+#X obj 59 24 inlet;
+#X obj 109 24 inlet;
+#X floatatom 59 46 5 0 0 0 - - -, f 5;
+#X floatatom 109 46 5 0 0 0 - - -, f 5;
+#X obj 37 146 spigot;
+#X obj 134 154 spigot;
+#X obj 69 228 outlet;
+#X obj 139 223 outlet;
+#X floatatom 97 140 5 0 0 0 - - -, f 5;
+#X obj 117 71 i;
+#X obj 59 65 t b f;
+#X obj 237 155 spigot;
+#X obj 242 224 outlet;
+#X obj 345 154 spigot;
+#X obj 350 223 outlet;
+#X obj 83 120 == \$1;
+#X obj 167 129 == \$2;
+#X obj 270 130 == \$3;
+#X obj 379 129 == \$3;
+#X obj 78 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 155 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 250 192 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 371 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 154 68 t b f, f 10;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 10 0;
+#X connect 3 0 9 1;
+#X connect 4 0 6 0;
+#X connect 4 0 19 0;
+#X connect 5 0 7 0;
+#X connect 5 0 20 0;
+#X connect 9 0 23 0;
+#X connect 10 0 9 0;
+#X connect 10 1 15 0;
+#X connect 10 1 16 0;
+#X connect 10 1 17 0;
+#X connect 10 1 18 0;
+#X connect 11 0 12 0;
+#X connect 11 0 21 0;
+#X connect 13 0 14 0;
+#X connect 13 0 22 0;
+#X connect 15 0 4 1;
+#X connect 15 0 8 0;
+#X connect 16 0 5 1;
+#X connect 17 0 11 1;
+#X connect 18 0 13 1;
+#X connect 23 1 4 0;
+#X connect 23 1 5 0;
+#X connect 23 1 11 0;
+#X connect 23 1 13 0;
