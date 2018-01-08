@@ -718,6 +718,7 @@ is not yet enabled;
 #X obj 1058 936 s end-\$0;
 #X obj 758 784 r ressssset-\$0;
 #X obj -78 167 r reset-\$0;
+#X text 582 751 TODO stack overflow --> reset -> length;
 #X connect 0 0 12 0;
 #X connect 3 0 160 0;
 #X connect 4 0 3 0;
