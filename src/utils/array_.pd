@@ -30,11 +30,12 @@
 #X text 42 63 reread from disk;
 #X obj 440 41 inlet;
 #X text 434 21 write (index \, value);
-#X obj 24 307 outlet;
+#X obj 32 314 outlet;
 #X obj 403 130 tabwrite track-\$1;
 #X obj 440 63 unpack f f;
 #X obj 440 85 i;
 #X obj 490 90 i;
+#X floatatom 123 325 5 0 0 0 - - -, f 5;
 #X connect 0 0 5 1;
 #X connect 0 0 8 1;
 #X connect 0 0 11 0;
@@ -59,6 +60,7 @@
 #X connect 20 0 5 0;
 #X connect 21 0 20 0;
 #X connect 22 0 29 0;
+#X connect 22 0 34 0;
 #X connect 23 0 22 0;
 #X connect 27 0 31 0;
 #X connect 31 0 32 0;
