@@ -1,0 +1,120 @@
+#N canvas 792 240 629 558 10;
+#X obj 374 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 102 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-262130 -1;
+#X floatatom 367 229 5 0 0 0 - - -, f 5;
+#X obj 240 164 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X floatatom 383 164 5 1 64 0 - - -, f 5;
+#X text 260 164 reset;
+#X obj 120 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-261682 -1;
+#X obj 482 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 449 229 5 0 0 0 - - -, f 5;
+#X floatatom 465 164 5 1 64 0 - - -, f 5;
+#X obj 400 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 370 139 Time signature (4/4);
+#X obj 76 45 inlet;
+#X obj 128 41 inlet;
+#X obj 179 41 inlet;
+#X obj 219 41 inlet;
+#X text 176 138 /;
+#X floatatom 140 164 5 0 0 0 - - -, f 5;
+#X floatatom 200 164 5 0 0 0 - - -, f 5;
+#X text 106 163 step;
+#X text 176 163 of;
+#X obj 367 288 outlet;
+#X obj 449 288 outlet;
+#X obj 136 116 hsl 60 15 1 15 0 0 empty empty Number_of_steps -2 -8
+0 10 -232576 -1 -1 1264 1;
+#X obj 11 128 i;
+#X floatatom 140 138 5 0 0 0 - - -, f 5;
+#X obj 206 116 hsl 50 15 2 8 0 0 empty empty empty -2 -8 0 10 -232576
+-1 -1 1633 1;
+#X obj 43 127 i;
+#X floatatom 195 138 5 0 0 0 - - -, f 5;
+#X obj 305 77 loadbang;
+#X msg 305 99 4;
+#X text 66 20 Tap (gate in) / num1 / num2 / reset;
+#X obj 36 362 outlet;
+#X obj 82 362 outlet;
+#X msg -36 265 number \$1;
+#X msg 34 154 number \$1;
+#X obj 105 189 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -228856
+-66577 -1 1;
+#X obj 315 274 - 1;
+#X obj 313 247 - 1;
+#X obj -36 218 cyclone/bondo;
+#X obj -36 240 *;
+#X text -82 325 comment;
+#X obj 218 266 *;
+#X msg -31 154 number \$1;
+#X obj 105 209 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -228856
+-66577 -1 0;
+#X obj 105 229 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -228856
+-66577 -1 4;
+#X floatatom 240 356 5 0 0 0 - - -, f 5;
+#X obj 239 304 cyclone/bondo;
+#X obj 239 326 +;
+#X text 42 388 num1 / num2 / current step / count1 / count 2;
+#X obj 177 356 outlet;
+#X obj 367 205 looper;
+#X obj 451 202 looper;
+#X connect 0 0 51 0;
+#X connect 2 0 17 0;
+#X connect 2 0 21 0;
+#X connect 2 0 37 0;
+#X connect 3 0 51 2;
+#X connect 3 0 52 2;
+#X connect 4 0 51 1;
+#X connect 8 0 18 0;
+#X connect 8 0 22 0;
+#X connect 8 0 38 0;
+#X connect 9 0 52 1;
+#X connect 12 0 0 0;
+#X connect 13 0 23 0;
+#X connect 14 0 26 0;
+#X connect 15 0 3 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 24 0 39 0;
+#X connect 24 0 32 0;
+#X connect 24 0 43 0;
+#X connect 24 0 42 1;
+#X connect 25 0 4 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 27 0 33 0;
+#X connect 27 0 35 0;
+#X connect 27 0 39 1;
+#X connect 28 0 9 0;
+#X connect 29 0 30 0;
+#X connect 30 0 23 0;
+#X connect 30 0 26 0;
+#X connect 34 0 45 0;
+#X connect 35 0 36 0;
+#X connect 37 0 47 1;
+#X connect 37 0 44 0;
+#X connect 38 0 36 0;
+#X connect 38 0 42 0;
+#X connect 39 0 40 0;
+#X connect 39 1 40 1;
+#X connect 40 0 34 0;
+#X connect 42 0 47 0;
+#X connect 43 0 44 0;
+#X connect 47 0 48 0;
+#X connect 47 1 48 1;
+#X connect 48 0 46 0;
+#X connect 48 0 50 0;
+#X connect 48 0 45 0;
+#X connect 51 0 1 0;
+#X connect 51 0 2 0;
+#X connect 51 1 10 0;
+#X connect 51 1 52 0;
+#X connect 52 0 6 0;
+#X connect 52 0 8 0;
+#X connect 52 1 7 0;
+#X coords 0 -1 1 1 250 150 2 100 100;
