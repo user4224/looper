@@ -7,7 +7,7 @@
 #X obj 145 105 hsl 25 15 0 1 0 0 empty empty empty -2 -8 0 10 -261682
 -1 -1 1209 1;
 #X obj 108 105 hsl 25 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
--1 -1 1191 1;
+-1 -1 1209 1;
 #X obj 387 9 inlet;
 #X msg 481 32 0.5;
 #X text 15 24 L \, R \, 1 \, 2 \, 3;
@@ -55,12 +55,13 @@
 #X obj 127 9 inlet;
 #X obj 179 105 hsl 25 15 0 1 0 0 empty empty empty -2 -8 0 10 -261234
 -1 -1 0 1;
-#X text 565 118 drive;
+#X text 563 94 drive;
 #X msg -302 117 500;
 #X floatatom 178 147 5 0 0 0 - - -, f 5;
 #X obj -69 280 vca~, f 10;
 #X msg -236 118 2500;
 #X obj -259 281 vca~, f 10;
+#X msg 498 52 0;
 #X connect 0 0 14 0;
 #X connect 0 0 15 0;
 #X connect 0 0 25 0;
@@ -68,6 +69,7 @@
 #X connect 1 0 17 0;
 #X connect 1 0 25 1;
 #X connect 4 0 8 0;
+#X connect 4 0 38 0;
 #X connect 5 0 12 0;
 #X connect 6 0 13 0;
 #X connect 7 0 28 0;
@@ -108,4 +110,5 @@
 #X connect 36 0 25 3;
 #X connect 37 0 19 0;
 #X connect 37 1 20 0;
+#X connect 38 0 27 0;
 #X coords 0 -1 1 1 110 25 2 100 100;
