@@ -1,5 +1,3 @@
-# looper
+# Pure Data Looper
 
-This project uses [pure data](https://puredata.info/)
-
-Depends on the pd-externals cyclone, zexy, saturator.
+This project depends on [pure data](https://puredata.info/) and the pd-externals cyclone, zexy, saturator.
